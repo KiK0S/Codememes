@@ -1,4 +1,0 @@
-This project is about creating a telegram bot playing codenames. On July 2019 it was online but now I turned my server off.
-Still it can be used locally.
-
-Bot can play 1 or 2 teams game, and do both guessing and making hints. The technology I used was Word2Vec & python-telegram-bot.
