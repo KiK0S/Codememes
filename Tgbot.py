@@ -2,7 +2,7 @@ import logging
 import json
 from telegram import *
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler
-logging.basicConfig(format = u'[%(filename)s{LINE:%(lineno)d}# %(levelname)-8s [%(asctime)s]  %(message)s]', level=logging.INFO, filename = u'bot.log')
+logging.basicConfig(format = u'[%(filename)s{LINE:%(lineno)d}# %(levelname)-8s [%(asctime)s]  %(message)s]', level=logging.DEBUG, filename = u'bot.log')
 from Model import *
 
 
@@ -303,10 +303,7 @@ def tik(update, context):
 	game.play()
 
 def main():
-	REQUEST_KWARGS={
-		'proxy_url': 'http://' + secret_data['proxy_ip'] + ':' + secret_data['proxy_port'],
-	}
-	updater = Updater(secret_data['token'], use_context=True, request_kwargs=REQUEST_KWARGS)
+	updater = Updater(secret_data['token'], use_context=True)
 	dp = updater.dispatcher
 	dp.add_handler(CommandHandler("start", start))
 	dp.add_handler(CommandHandler("setup", setup))

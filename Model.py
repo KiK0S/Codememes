@@ -13,6 +13,8 @@ with open('secret_data', 'r') as f:
 	secret_data = json.load(f)
 PROFITS = secret_data['PROFITS']
 CAN_GUESS_THRESHOLD = secret_data['CAN_GUESS_THRESHOLD']
+# can be downloaded from https://rusvectores.org/static/models/rusvectores4/RNC/ruscorpora_upos_skipgram_300_5_2018.vec.gz
+# then rename to model.txt and do parser.py
 model = KeyedVectors.load_word2vec_format('model_prime.txt')
 MULTIPLY_EXP = secret_data['MULTIPLY_EXP']
 
