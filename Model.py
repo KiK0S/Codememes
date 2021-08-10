@@ -21,10 +21,8 @@ MULTIPLY_EXP = secret_data['MULTIPLY_EXP']
 def get_emoji(s):
 	if s == 'r':
 		return emoji.emojize(':red_circle:')
-
 	if s == 'w':
 		return emoji.emojize(':white_circle:')
-
 	if s == 'b':
 		return emoji.emojize(':blue_circle:')
 	if s == 'd':
